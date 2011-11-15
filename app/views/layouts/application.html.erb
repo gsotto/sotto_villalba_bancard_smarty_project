@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smarty</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body id="store">
+<div id="banner">
+  <%= image_tag("logo_256.png", :height => 64, :width => 64) %>
+  <h2><%= @page_title || "Shopping" %></h2>
+</div>
+<div id="columns">
+  <div id="side">
+
+    <div>
+      <a href="#">Home</a>
+      <a href="#">Questions</a>
+      <a href="#">News</a>
+      <a href="#">Contact</a>
+    </div>
+    <div id="cart">
+      <% if @cart %>
+          <%= render @cart, :message => 'Carrito de compras' %>
+      <% end %>
+
+    </div>
+  </div>
+  <div id="main">
+    <%= yield %>
+  </div>
+  <div class="clear"></div>
+</div>
+</body>
+</html>
+
+
+<%#:partial => 'carts/cart',
+                     :locals => {:cart => esto iba en la linea 24%>

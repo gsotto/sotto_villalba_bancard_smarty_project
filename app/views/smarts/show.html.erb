@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @smart.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @smart.description %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @smart.image_url %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @smart.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_smart_path(@smart) %> |
+<%= link_to 'Back', smarts_path %>

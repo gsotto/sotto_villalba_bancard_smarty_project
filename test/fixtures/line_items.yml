@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  smart_id: 1
+  cart_id: 1
+
+two:
+  smart_id: 1
+  cart_id: 1

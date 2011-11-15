@@ -1,0 +1,29 @@
+<h1>Listing smarts</h1>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @smarts.each do |smart| %>
+  <tr class="<%= cycle('list_line_odd','list_line_even')%>">
+    <td><%= image_tag(smart.image_url) %></td>
+    <td><%= smart.name %></td>
+    <td><%= smart.description %></td>
+    <td><%= smart.price %></td>
+    <td><%= link_to 'Show', smart %></td>
+    <td><%= link_to 'Edit', edit_smart_path(smart) %></td>
+    <td><%= link_to 'Destroy', smart, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Smart', new_smart_path %>
